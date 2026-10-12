@@ -23,7 +23,13 @@ func orderCategory(amount int) (category string, err error) {
 }
 
 func main() {
-	amount := 50_000
+	var amount int
+
+	_, err := fmt.Scan(&amount)
+	if err != nil {
+		fmt.Println("Input error: ", err)
+	}
+
 	category, err := orderCategory(amount)
 	if err != nil {
 		fmt.Println("Error:", err)
