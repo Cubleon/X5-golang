@@ -28,6 +28,7 @@ func main() {
 	_, err := fmt.Scan(&amount)
 	if err != nil {
 		fmt.Println("Input error: ", err)
+		return
 	}
 
 	category, err := orderCategory(amount)
